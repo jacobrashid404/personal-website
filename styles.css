@@ -441,6 +441,7 @@ ABOUT STYLING ***********************************************************
 
 #contact-text {
   transition: opacity 1s ease;
+  transition: transform 1s ease-in-out;
   align-self: flex-start;
 }
 

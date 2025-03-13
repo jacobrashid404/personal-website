@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectWords.forEach((word, index) => {
       setTimeout(() => {
-        word.style.color = "rgb(245, 169, 131)";
+        word.style.color = "gold"; // color of highlighted skills
       }, index * 500);
     });
 
@@ -55,9 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }, projectWords.length * 500);
   }
 
+  let flashInterval = null;
+
+  // highlight key skills when hovering over a project
   document.addEventListener("mouseover", (event) => {
     if (event.target.classList.contains("project")) {
-      flashWords(event.target);
+      if (!flashInterval) {
+        flashInterval = setInterval(() => {
+          flashWords(event.target);
+        }, 500);
+      }
+    }
+  });
+
+  document.addEventListener("mouseout", (event) => {
+    if (event.target.classList.contains("project")) {
+      clearInterval(flashInterval);
+      flashInterval = null;
     }
   });
 
@@ -117,6 +131,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contactRowThree = document.querySelectorAll('.contact-row-3');
   contactRowThree.forEach((element) => oberserverDelayTwo.observe(element));
+
+
+  // handle brightness change when hovering over eclipse
+  const eclipse = document.querySelector('.eclipse');
+  const contactSection = document.getElementById('contact');
+  const nameInput = contactSection.querySelector('input[name="name"]');
+  const emailInput = contactSection.querySelector('input[name="email"]');
+  const messageInput = contactSection.querySelector('textarea[name="message"]');
+
+  console.log(nameInput, emailInput, messageInput);
+
+  eclipse.addEventListener('mouseover', () => {
+    nameInput.style.borderColor = 'gold';
+    emailInput.style.borderColor = 'rgb(206, 120, 77)';
+    messageInput.style.borderColor = 'rgb(158, 28, 152)';
+  });
+
+  eclipse.addEventListener('mouseout', () => {
+    nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
+    emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';
+    messageInput.style.borderColor = 'rgba(158, 28, 152, 0.25)';
+  });
 });
 
 

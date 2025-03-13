@@ -463,6 +463,7 @@ form {
 }
 
 label {
+  color: lightgray;
   text-align: left;
   font-size: 1rem;
   margin-top: 10px;
@@ -471,11 +472,20 @@ label {
 input, textarea {
   background: black;
   color: #ffffff;
-  border: 1px solid #444;
   padding: 10px;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border 0.3s ease-in-out;
+  transition: border 0.5s ease-in-out;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+textarea:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 input:nth-of-type(1) {
@@ -489,6 +499,7 @@ input:nth-of-type(2) {
 input:focus:nth-of-type(1) {
   border-color: gold;
   outline: none;
+  opacity: 1;
 }
 
 input:focus:nth-of-type(2) {
@@ -522,7 +533,7 @@ button:hover {
   background: rgb(158, 28, 152);
 }
 
-.idk {
+.eclipse {
   transition: all 1s ease-in-out;
   border: 1px solid white;
   width: 500px;
@@ -531,9 +542,9 @@ button:hover {
   box-shadow: gold 0px 0px 50px 0px;
 }
 
-.idk:hover {
+.eclipse:hover {
   border-color: rgb(158, 28, 152);
-  box-shadow: rgb(158, 28, 152) 0px 0px 90px 0px;
+  box-shadow: rgb(158, 28, 152) 0px 0px 200px 0px;
   background: white;
 }
 

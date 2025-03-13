@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Pacifico&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="mobile-message">
+    This site is best viewed on a desktop or laptop :)
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <p class="signature">Jacob Rashid</p>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <p class="intro-text">Hi, my name is</p>
+    <h1 class="name">Jacob</h1>
+    <p class="intro-text">and I'm a</p>
+    <h1 class="title">Software Engineer</h1>
+    <p class="intro-text">based in Portland, OR</p>
+    <!-- <a href="https://www.linkedin.com/in/jacob-rashid-dev/" target="_blank" class="linkedin-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+        class="linkedin-logo">
+      Connect with me
+    </a> -->
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jacob-rashid-dev/" target="_blank">
+        <img src="icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/jacobrashid404" target="_blank" class="github-link">
+        <img src="icons/github.svg" alt="GitHub">
+      </a>
+    </div>
+  </section>
+
+
+
+  <section id="about">
+    <h1 class="skill-row-3">I love working with</h1>
+    <div class="typewriter skill-row-3">
+      <span class="typing-text"></span>
+      <span class="underline"></span>
+    </div>
+    <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let skills = ['JavaScript', 'TypeScript', 'React', 'Express', 'Node.js', 'Python', 'Django', 'Flask', 'PostgreSQL', 'HTML', 'CSS'];
+
+        function typeSkills(index = 0) {
+          const typingElement = document.querySelector(".typing-text");
+          typingElement.innerHTML = ""; // Ensure text is empty between cycles
+
+
+          const typeItInstance = new TypeIt(typingElement, {
+            deleteSpeed: 70,
+          });
+
+          // Type the current skill
+          typeItInstance.type(skills[index])
+            .pause(1000)
+            .delete()
+            .pause(500)
+            .go();
+
+          // Give each skill enough time to be typed before moving to the next
+          setTimeout(() => {
+            index = (index + 1) % skills.length;
+            typeSkills(index);
+          }, 5000);
+        }
+
+        typeSkills();
+      });
+    </script>
+
+    <div class="skills-grid">
+      <div class="skill skill-row-1"><img src="icons/javascript.svg" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill skill-row-1"><img src="icons/typescript.svg" alt="TypeScript">
+        <p>TypeScript</p>
+      </div>
+      <div class="skill skill-row-1"><img src="icons/react.svg" alt="React">
+        <p>React</p>
+      </div>
+      <div class="skill skill-row-1"><img src="icons/express.svg" alt="Express">
+        <p>Express</p>
+      </div>
+      <div class="skill skill-row-2"><img src="icons/nodejs.svg" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="skill skill-row-2"><img src="icons/python.svg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="skill skill-row-2"><img src="icons/django.svg" alt="Django">
+        <p>Django</p>
+      </div>
+      <div class="skill skill-row-2"><img src="icons/flask.svg" alt="Flask">
+        <p>Flask</p>
+      </div>
+      <div class="skill skill-row-3"><img src="icons/postgresql.svg" alt="PostgreSQL">
+        <p>PostgreSQL</p>
+      </div>
+      <div class="skill skill-row-3"><img src="icons/html.svg" alt="HTML">
+        <p>HTML</p>
+      </div>
+      <div class="skill skill-row-3"><img src="icons/css.svg" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="skill skill-row-3"><img src="icons/amazon.svg" alt="Amazon S3">
+        <p>Amazon S3</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="project-row-1">Projects and Contributions</h2>
+    <div class="projects-grid">
+      <div class="project project-row-1">
+        <h3>Warbler</h3>
+        <p>A social media app built with <b>Python</b>, <b>Flask</b> and <b>SQLAlchemy</b></p>
+        <p><b>HTML</b>-serving backend utilizes <b>Jinja Templates</b>, creating a dymanic user experience</p>
+        <a href="#" class="btn-demo">Demo</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+      <div class="project project-row-1">
+        <h3>Pix.ly</h3>
+        <p>Brief description of the project goes here.</p>
+        <p>Sample text</p>
+        <a href="#" class="btn-demo">Demo</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+      <div class="project project-row-2">
+        <h3>Job.ly</h3>
+        <p>Brief description of the project goes here.</p>
+        <p>Sample text</p>
+        <a href="#" class="btn-demo">Demo</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+      <div class="project project-row-2">
+        <h3>Rithm Student Information System</h3>
+        <p>Brief description of the project goes here.</p>
+        <p>Sample text</p>
+        <a href="#" class="btn-demo">Demo</a>
+        <a href="#" class="btn-git">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="contact">
+    <div class="contact-form">
+      <h2 id="contact-text" class="contact-row-1">Contact Me</h2>
+      <form id="contact-form" class="contact-row-1">
+        <label for="name">Name</label>
+        <input class="contact-row-1" type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input class="contact-row-2" type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea class="contact-row-3" id="message" name="message" rows="10" required></textarea>
+
+        <button class="contact-row-3" type="submit">Send</button>
+      </form>
+    </div>
+    <div class="idk contact-row-2"></div>
+  </section>
+
+</body>
+
+</html>

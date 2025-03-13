@@ -1,0 +1,25 @@
+{
+  "hash": "23c3aec8",
+  "configHash": "f71720fc",
+  "lockfileHash": "88d3e446",
+  "browserHash": "ed7f1961",
+  "optimized": {
+    "typewriter-effect/dist/core": {
+      "src": "../../node_modules/typewriter-effect/dist/core.js",
+      "file": "typewriter-effect_dist_core.js",
+      "fileHash": "708da5ef",
+      "needsInterop": true
+    },
+    "typewriter-effect": {
+      "src": "../../node_modules/typewriter-effect/dist/react.js",
+      "file": "typewriter-effect.js",
+      "fileHash": "2223efe3",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-BUSYA2B4": {
+      "file": "chunk-BUSYA2B4.js"
+    }
+  }
+}

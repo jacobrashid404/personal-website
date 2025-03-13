@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         contactText.innerHTML = "Thank you for your message. I'll be in touch shortly!";
+        contactText.style.marginTop = "400px";
         contactText.classList.remove("hidden");
       }, 1000); // Wait for fade-out animation
     }
@@ -55,10 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, projectWords.length * 500);
   }
 
+
   let flashInterval = null;
 
   // highlight key skills when hovering over a project
-  document.addEventListener("mouseover", (event) => {
+  document.addEventListener("mousemove", (event) => {
     if (event.target.classList.contains("project")) {
       if (!flashInterval) {
         flashInterval = setInterval(() => {
@@ -139,20 +141,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = contactSection.querySelector('input[name="name"]');
   const emailInput = contactSection.querySelector('input[name="email"]');
   const messageInput = contactSection.querySelector('textarea[name="message"]');
+  const contactText = document.getElementById('contact-text');
 
-  console.log(nameInput, emailInput, messageInput);
-
-  eclipse.addEventListener('mouseover', () => {
+  //contact form input fields glow when hovering over the eclipse
+  // and reset when not hovering
+  eclipse.addEventListener("mouseover", () => {
+    contactText.style.transform = 'scale(1.3) translateY(-20px) translateX(260px)';
     nameInput.style.borderColor = 'gold';
     emailInput.style.borderColor = 'rgb(206, 120, 77)';
     messageInput.style.borderColor = 'rgb(158, 28, 152)';
   });
 
-  eclipse.addEventListener('mouseout', () => {
+  eclipse.addEventListener("mouseout", () => {
+    contactText.style.transform = 'scale(1) translateY(0px)';
     nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
     emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';
     messageInput.style.borderColor = 'rgba(158, 28, 152, 0.25)';
   });
+
+
+  // reset border color when input is focused to allow CSS transition to work
+  // otherwise the mouseover eventlistener will override the CSS focus
+  nameInput.addEventListener("focus", () => nameInput.style.borderColor = "");
+  emailInput.addEventListener("focus", () => emailInput.style.borderColor = "");
+  messageInput.addEventListener("focus", () => messageInput.style.borderColor = "");
 });
 
 

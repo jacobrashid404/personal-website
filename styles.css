@@ -36,6 +36,10 @@ GENERAL STYLING ***********************************************************
   font-family: 'Share Tech Mono', monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Pacifico", sans-serif;
   /* background: #121212; */
@@ -330,6 +334,7 @@ ABOUT STYLING ***********************************************************
 
 #projects {
   text-align: center;
+  padding: 100px 0 0;
 }
 
 #projects h2 {
@@ -440,8 +445,6 @@ ABOUT STYLING ***********************************************************
 }
 
 #contact-text {
-  /* transition: opacity 1s ease;
-  transition: transform 1s ease-in-out; */
   transition: all 1s ease-in-out;
   align-self: flex-start;
 }
@@ -537,16 +540,16 @@ button:hover {
 
 .eclipse {
   transition: all 1s ease-in-out;
-  border: 1px solid white;
+  border: 1px solid black;
   width: 500px;
   height: 500px;
   border-radius: 100%;
-  box-shadow: gold 0px 0px 50px 0px;
+  box-shadow: gold 0px 0px 200px 0px;
 }
 
 .eclipse:hover {
-  border-color: rgb(158, 28, 152);
-  box-shadow: rgb(158, 28, 152) 0px 0px 200px 0px;
+  border-color: black;
+  box-shadow: rgb(158, 28, 152) 0px 0px 400px 0px;
   background: white;
 }
 

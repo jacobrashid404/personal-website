@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //contact form input fields glow when hovering over the eclipse
   // and reset when not hovering
   eclipse.addEventListener("mouseover", () => {
-    contactText.style.transform = 'scale(1.3) translateY(-20px) translateX(260px)';
+    // contactText.style.transform = 'scale(1.3) translateY(-20px) translateX(260px)';
     contactText.style.textShadow = '0 0 10px white';
     nameInput.style.borderColor = 'gold';
     emailInput.style.borderColor = 'rgb(206, 120, 77)';
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   eclipse.addEventListener("mouseout", () => {
-    contactText.style.transform = 'scale(1) translateY(0px)';
+    // contactText.style.transform = 'scale(1) translateY(0px)';
     contactText.style.textShadow = 'none';
     nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
     emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';

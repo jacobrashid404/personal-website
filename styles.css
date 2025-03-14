@@ -41,6 +41,7 @@ html {
 }
 
 body {
+  z-index: 1000000;
   margin-bottom: 3px;
   font-family: "Pacifico", sans-serif;
   /* background: #121212; */
@@ -562,7 +563,7 @@ textarea:focus {
 
 button {
   width: 100px;
-  background: rgba(158, 28, 152, 0.596);
+  background: rgba(158, 28, 152, 0.25);
   color: black;
   border: none;
   border-radius: 5px;

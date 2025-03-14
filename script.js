@@ -197,10 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageInput = contactSection.querySelector('textarea[name="message"]');
   const contactText = document.getElementById('contact-text');
   const contactButton = contactSection.querySelector('button');
+  const navBar = document.querySelector('nav');
 
   //contact form input fields glow when hovering over the eclipse
   // and reset when not hovering
   eclipse.addEventListener("mouseover", () => {
+    navBar.style.filter = 'brightness(0.5)';
     body.style.borderLeftColor = 'rgba(255, 217, 0, 0.25)';
     body.style.borderBottomColor = 'rgba(206, 120, 77, 0.25)';
     body.style.borderRightColor = 'rgba(158, 28, 152, 0.25)';
@@ -212,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   eclipse.addEventListener("mouseout", () => {
-    // contactText.style.transform = 'scale(1) translateY(0px)';
+    navBar.style.filter = 'brightness(1)';
     body.style.borderLeftColor = 'gold';
     body.style.borderBottomColor = 'rgb(206, 120, 77)';
     body.style.borderRightColor = 'rgb(158, 28, 152)'

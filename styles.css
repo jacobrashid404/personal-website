@@ -41,9 +41,14 @@ html {
 }
 
 body {
+  margin-bottom: 3px;
   font-family: "Pacifico", sans-serif;
   /* background: #121212; */
   background: radial-gradient(circle, rgba(0,0,0,0.93), rgba(0,0,0,1) 80%);
+  border-left: 2px solid gold;
+  border-right: 2px solid rgb(156, 24, 156);
+  border-bottom: 2px solid rgb(206, 120, 77);
+  transition: all 0.5s ease-in-out;
   color: #f0f0f0;
 }
 

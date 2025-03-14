@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // observe all elements that need to be animated
-
   // skills section
   const skillRowOne = document.querySelectorAll('.skill-row-1');
   skillRowOne.forEach((element) => observerNormalLeft.observe(element));
@@ -197,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = contactSection.querySelector('input[name="email"]');
   const messageInput = contactSection.querySelector('textarea[name="message"]');
   const contactText = document.getElementById('contact-text');
+  const contactButton = contactSection.querySelector('button');
 
   //contact form input fields glow when hovering over the eclipse
   // and reset when not hovering
@@ -208,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     nameInput.style.borderColor = 'gold';
     emailInput.style.borderColor = 'rgb(206, 120, 77)';
     messageInput.style.borderColor = 'rgb(158, 28, 152)';
+    contactButton.style.background = 'rgb(158, 28, 152)';
   });
 
   eclipse.addEventListener("mouseout", () => {
@@ -219,14 +220,16 @@ document.addEventListener("DOMContentLoaded", () => {
     nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
     emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';
     messageInput.style.borderColor = 'rgba(158, 28, 152, 0.25)';
+    contactButton.style.background = 'rgba(158, 28, 152, 0.25)';
   });
 
 
-  // reset border color when input is focused to allow CSS transition to work
-  // otherwise the mouseover eventlistener will override the CSS focus
+  // reset style properties when form elements are focused or hovered to allow CSS transitions to work
+  // otherwise eventlisteners property assignments will override the CSS focus assignments
   nameInput.addEventListener("focus", () => nameInput.style.borderColor = "");
   emailInput.addEventListener("focus", () => emailInput.style.borderColor = "");
   messageInput.addEventListener("focus", () => messageInput.style.borderColor = "");
+  contactButton.addEventListener("mouseenter", () => contactButton.style.background = "");
 });
 
 

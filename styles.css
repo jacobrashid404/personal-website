@@ -440,8 +440,9 @@ ABOUT STYLING ***********************************************************
 }
 
 #contact-text {
-  transition: opacity 1s ease;
-  transition: transform 1s ease-in-out;
+  /* transition: opacity 1s ease;
+  transition: transform 1s ease-in-out; */
+  transition: all 1s ease-in-out;
   align-self: flex-start;
 }
 

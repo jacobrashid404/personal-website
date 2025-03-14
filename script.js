@@ -60,6 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let flashInterval = null;
 
   // highlight key skills when hovering over a project
+  document.addEventListener("mouseout", (event) => {
+    if (event.target.classList.contains("project")) {
+      clearInterval(flashInterval);
+      flashInterval = null;
+    }
+  })
+
   document.addEventListener("mousemove", (event) => {
     if (event.target.classList.contains("project")) {
       if (!flashInterval) {
@@ -70,69 +77,116 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.addEventListener("mouseout", (event) => {
-    if (event.target.classList.contains("project")) {
-      clearInterval(flashInterval);
-      flashInterval = null;
-    }
-  });
 
 
-
-  // adds animation classes to a list of elements
-  const oberserverNormal = new IntersectionObserver(entries => {
+  // adds animate-left class to a list of elements
+  const observerNormalLeft = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-left');
         return;
       }
     });
   });
 
-  // animation delay 1
-  const oberserverDelayOne = new IntersectionObserver(entries => {
+  // animation left delay 1
+  const observerDelayOneLeft = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-delay-1');
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-left-delay-1');
         return;
       }
     });
   });
 
-  // animation delay 2
-  const oberserverDelayTwo = new IntersectionObserver(entries => {
+  // animation left delay 2
+  const observerDelayTwoLeft = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-delay-2');
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-left-delay-2');
         return;
       }
     });
   });
+
+
+  // adds animate-right class to a list of elements
+  const observerNormalRight = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-right');
+        return;
+      }
+    });
+  });
+
+  // animation right delay 1
+  const observerDelayOneRight = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-right-delay-1');
+        return;
+      }
+    });
+  });
+
+  // animation right delay 2
+  const observerDelayTwoRight = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        entry.target.classList.add('animate-right-delay-2');
+        return;
+      }
+    });
+  });
+
 
   // observe all elements that need to be animated
+
+  // skills section
   const skillRowOne = document.querySelectorAll('.skill-row-1');
-  skillRowOne.forEach((element) => oberserverNormal.observe(element));
+  skillRowOne.forEach((element) => observerNormalLeft.observe(element));
 
   const skillRowTwo = document.querySelectorAll('.skill-row-2');
-  skillRowTwo.forEach((element) => oberserverDelayOne.observe(element));
+  skillRowTwo.forEach((element) => observerDelayOneLeft.observe(element));
 
   const skillRowThree = document.querySelectorAll('.skill-row-3');
-  skillRowThree.forEach((element) => oberserverDelayTwo.observe(element));
+  skillRowThree.forEach((element) => observerDelayTwoLeft.observe(element));
+
+  const skillDisplay = document.querySelectorAll('.skill-display');
+  skillDisplay.forEach((element) => observerDelayTwoRight.observe(element));
+
+
+  // project section
+  const projectRowZero = document.querySelectorAll('.project-row-0');
+  projectRowZero.forEach((element) => observerNormalLeft.observe(element));
 
   const projectRowOne = document.querySelectorAll('.project-row-1');
-  projectRowOne.forEach((element) => oberserverNormal.observe(element));
+  projectRowOne.forEach((element) => observerNormalRight.observe(element));
 
   const projectRowTwo = document.querySelectorAll('.project-row-2');
-  projectRowTwo.forEach((element) => oberserverDelayOne.observe(element));
+  projectRowTwo.forEach((element) => observerDelayOneLeft.observe(element));
 
+
+  // contact section
   const contactRowOne = document.querySelectorAll('.contact-row-1');
-  contactRowOne.forEach((element) => oberserverNormal.observe(element));
+  contactRowOne.forEach((element) => observerNormalRight.observe(element));
 
   const contactRowTwo = document.querySelectorAll('.contact-row-2');
-  contactRowTwo.forEach((element) => oberserverDelayOne.observe(element));
+  contactRowTwo.forEach((element) => observerDelayOneRight.observe(element));
 
   const contactRowThree = document.querySelectorAll('.contact-row-3');
-  contactRowThree.forEach((element) => oberserverDelayTwo.observe(element));
+  contactRowThree.forEach((element) => observerDelayTwoRight.observe(element));
+
+  const contactEclipse = document.querySelectorAll('.eclipse');
+  contactEclipse.forEach((element) => observerDelayTwoLeft.observe(element));
+
 
 
   // handle brightness change when hovering over eclipse

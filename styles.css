@@ -118,23 +118,57 @@ ANIMATIONS ***********************************************************
   }
 }
 
-.animate {
+.animate-left {
   animation-name: slide-left;
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
 
-.animate-delay-1 {
+.animate-left-delay-1 {
   animation-name: slide-left;
   animation-duration: 3s;
   animation-iteration-count: 1;
 }
 
-.animate-delay-2 {
+.animate-left-delay-2 {
   animation-name: slide-left;
   animation-duration: 4s;
   animation-iteration-count: 1;
 }
+
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+    filter: blur(0px);
+  }
+}
+
+.animate-right {
+  animation-name: slide-right;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.animate-right-delay-1 {
+  animation-name: slide-right;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+.animate-right-delay-2 {
+  animation-name: slide-right;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
 
 /*
 HOME STYLING ***********************************************************

@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resumeLink = document.querySelector('.resume-link');
   const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');
   const bodyElement = document.querySelector('body');
+
   function invertBorder() {
     bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
     bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
@@ -63,6 +64,23 @@ document.addEventListener("DOMContentLoaded", () => {
       entry.style.filter = 'invert(0%)';
     });
   });
+
+
+  // display preview when hovering a social link
+  const linkPreview = document.querySelector('.link-preview');
+  const socialLinks = document.querySelectorAll(".link");
+
+  socialLinks.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      linkPreview.innerHTML = `${link.getAttribute('name')}`;
+      linkPreview.classList.remove('hidden');
+    });
+
+    link.addEventListener("mouseleave", () => {
+      linkPreview.classList.add('hidden');
+    });
+  });
+
 
 
 

@@ -214,6 +214,7 @@ HOME STYLING ***********************************************************
 }
 
 .link-preview {
+  position: relative;
   transition: all 0.3s ease-in-out;
 }
 
@@ -368,6 +369,14 @@ ABOUT STYLING ***********************************************************
 .skill img:hover {
   transform: scale(1.3);
   filter: invert(100%);
+}
+
+.skill p {
+  transition: all 0.5s ease-in-out;
+}
+
+.skill:hover p {
+  color: white;
 }
 
 .skill p {

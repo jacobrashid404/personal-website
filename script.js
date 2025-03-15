@@ -241,6 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectRowTwo = document.querySelectorAll('.project-row-2');
   projectRowTwo.forEach((element) => observerDelayOneLeft.observe(element));
 
+  const projectRowThree = document.querySelectorAll('.project-row-3');
+  projectRowThree.forEach((element) => observerDelayTwoRight.observe(element));
+
 
   // contact section
   const contactRowOne = document.querySelectorAll('.contact-row-1');

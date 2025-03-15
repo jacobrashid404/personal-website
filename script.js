@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   invertGradient(resumeLink);
 
   function invertGradient(triggerElement) {
-    const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');
+    const gradientElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');
 
     function invertBorder() {

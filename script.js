@@ -37,33 +37,37 @@ document.addEventListener("DOMContentLoaded", () => {
   // TODO: refactor this into a function for re-use
   // change website colors when hovering over the resume link
   const resumeLink = document.querySelector('.resume-link');
-  const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');
-  const bodyElement = document.querySelector('body');
+  invertGradient(resumeLink);
 
-  function invertBorder() {
-    bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
-    bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
-    bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
-  }
-  function restoreBorder() {
-    bodyElement.style.borderLeft = '';
-    bodyElement.style.borderBottom = '';
-    bodyElement.style.borderRight = '';
-  }
+  function invertGradient(triggerElement) {
+    const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');
+    const bodyElement = document.querySelector('body');
 
-  resumeLink.addEventListener("mouseenter", () => {
-    invertBorder();
-    gradientElements.forEach(entry => {
-      entry.style.filter = 'invert(100%)';
+    function invertBorder() {
+      bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
+      bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
+      bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
+    }
+    function restoreBorder() {
+      bodyElement.style.borderLeft = '';
+      bodyElement.style.borderBottom = '';
+      bodyElement.style.borderRight = '';
+    }
+
+    triggerElement.addEventListener("mouseenter", () => {
+      invertBorder();
+      gradientElements.forEach(entry => {
+        entry.style.filter = 'invert(100%)';
+      });
     });
-  });
 
-  resumeLink.addEventListener("mouseleave", () => {
-    restoreBorder();
-    gradientElements.forEach(entry => {
-      entry.style.filter = 'invert(0%)';
+    triggerElement.addEventListener("mouseleave", () => {
+      restoreBorder();
+      gradientElements.forEach(entry => {
+        entry.style.filter = 'invert(0%)';
+      });
     });
-  });
+  }
 
 
   // display preview when hovering a social link
@@ -87,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // change typewriter text color when hovering over skills grid
   const typingText = document.querySelector('.typing-text');
   const skillsGrid = document.querySelector('.skills-grid');
+  invertGradient(skillsGrid);
 
   skillsGrid.addEventListener("mouseenter", () => {
     typingText.style.filter = 'invert(100%)';

@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  // TODO: refactor this into a function for re-use
-  // change website colors when hovering over the resume link
+  // invert gradient when hovering over the resume link
   const resumeLink = document.querySelector('.resume-link');
   invertGradient(resumeLink);
 
@@ -88,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  // change typewriter text color when hovering over skills grid
+  // invert gradient when hovering over skills grid
   const typingText = document.querySelector('.typing-text');
   const skillsGrid = document.querySelector('.skills-grid');
   invertGradient(skillsGrid);

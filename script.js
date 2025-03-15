@@ -33,9 +33,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // flash key skills when hovering over a project
+
+  // change website colors when hovering over the resume link
+  const resumeLink = document.querySelector('.resume-link');
+  const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');
+  const bodyElement = document.querySelector('body');
+  function invertBorder() {
+    bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
+    bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
+    bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
+  }
+  function restoreBorder() {
+    bodyElement.style.borderLeft = '';
+    bodyElement.style.borderBottom = '';
+    bodyElement.style.borderRight = '';
+  }
+
+  resumeLink.addEventListener("mouseenter", () => {
+    invertBorder();
+    gradientElements.forEach(entry => {
+      entry.style.filter = 'invert(100%)';
+    });
+  });
+
+  resumeLink.addEventListener("mouseleave", () => {
+    restoreBorder();
+    gradientElements.forEach(entry => {
+      entry.style.filter = 'invert(0%)';
+    });
+  });
+
+
+
+  // change typewriter text color when hovering over skills grid
+  const typingText = document.querySelector('.typing-text');
+  const skillsGrid = document.querySelector('.skills-grid');
+
+  skillsGrid.addEventListener("mouseenter", () => {
+    typingText.style.filter = 'invert(100%)';
+  });
+
+  skillsGrid.addEventListener("mouseleave", () => {
+    typingText.style.filter = 'invert(0%)';
+  });
+
+
+
   let isFlashing = false;
 
+  // highlights a list of words with a slight delay between each element
   function flashWords(parentElement) {
     if (isFlashing) return;
 
@@ -65,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(flashInterval);
       flashInterval = null;
     }
-  })
+  });
 
   document.addEventListener("mousemove", (event) => {
     if (event.target.classList.contains("project")) {
@@ -217,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navBar.style.filter = 'brightness(1)';
     body.style.borderLeftColor = 'gold';
     body.style.borderBottomColor = 'rgb(206, 120, 77)';
-    body.style.borderRightColor = 'rgb(158, 28, 152)'
+    body.style.borderRightColor = 'rgb(158, 28, 152)';
     contactText.style.textShadow = 'none';
     nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
     emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';
@@ -232,7 +278,5 @@ document.addEventListener("DOMContentLoaded", () => {
   emailInput.addEventListener("focus", () => emailInput.style.borderColor = "");
   messageInput.addEventListener("focus", () => messageInput.style.borderColor = "");
   contactButton.addEventListener("mouseenter", () => contactButton.style.background = "");
+
 });
-
-
-

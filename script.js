@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  // TODO: refactor this into a function for re-use
   // change website colors when hovering over the resume link
   const resumeLink = document.querySelector('.resume-link');
   const gradientElements = document.querySelectorAll('.title, .navbar, .my-name');

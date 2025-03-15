@@ -188,6 +188,10 @@ HOME STYLING ***********************************************************
   color: white;
 }
 
+#home b {
+  color: wheat;
+}
+
 .city {
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
   -webkit-background-clip: text;
@@ -411,26 +415,26 @@ ABOUT STYLING ***********************************************************
 
 .projects-grid {
   display: grid;
-  align-items: start;
   grid-template-columns: repeat(2, minmax(600px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
 }
 
 .project {
-  background: black;
-  border-radius: 12px;
+  background-color: black;
+  border-radius: 15px;
   padding: 20px;
   text-align: left;
   transition: all 0.5s ease-in-out;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
+  border: 2px solid rgb(206, 120, 77);
 }
 
 .project:hover {
-  border-radius: 22px;
-  border: 2px solid rgb(206, 120, 77);
+  border-radius: 25px;
+  background-color: rgb(19, 19, 19);
+  /* border: 2px solid rgb(206, 120, 77); */
 }
 
 .project h3 {
@@ -578,7 +582,7 @@ textarea:focus {
 button {
   width: 100px;
   background: rgba(158, 28, 152, 0.25);
-  color: black;
+  color: white;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -590,6 +594,7 @@ button {
 
 button:hover {
   background: rgb(158, 28, 152);
+  color: black;
 }
 
 .eclipse {

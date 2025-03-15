@@ -14,7 +14,7 @@
   <div class="mobile-message">
     This site is best viewed on a desktop or laptop :)
   </div>
-  <nav>
+  <nav class="navbar">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -26,7 +26,7 @@
 
   <section id="home">
     <p class="intro-text">Hi, my name is</p>
-    <h1 class="name">Jacob</h1>
+    <h1 class="my-name">Jacob</h1>
     <p class="intro-text">and I'm a</p>
     <h1 class="title">Software Engineer</h1>
     <p class="intro-text">based in Portland, OR</p>
@@ -68,11 +68,12 @@
 
           const typeItInstance = new TypeIt(typingElement, {
             deleteSpeed: 70,
+            lifeLike: true,
           });
 
           // Type the current skill
           typeItInstance.type(skills[index])
-            .pause(1000)
+            .pause(3000)
             .delete()
             .pause(500)
             .go();
@@ -81,7 +82,7 @@
           setTimeout(() => {
             index = (index + 1) % skills.length;
             typeSkills(index);
-          }, 5000);
+          }, 6000);
         }
 
         typeSkills();
@@ -171,7 +172,7 @@
     <div class="contact-form">
       <h2 id="contact-text" class="contact-row-1">Contact Me</h2>
       <form id="contact-form" class="contact-row-1">
-        <label for="name" class="contact-row-1">Name</label>
+        <label for="name" name="name" class="contact-row-1">Name</label>
         <input class="contact-row-1" type="text" id="name" name="name" placeholder="John Smith" required>
 
         <label for="email" class="contact-row-2">Email</label>

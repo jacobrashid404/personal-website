@@ -456,6 +456,7 @@ ABOUT STYLING ***********************************************************
 
 .project a:hover {
   border-radius: 10px;
+  background: black;
 }
 
 .project .btn-demo {
@@ -479,11 +480,8 @@ ABOUT STYLING ***********************************************************
 }
 
 .project .btn-demo:hover {
-  background: rgb(161, 93, 59);
-}
-
-.project .btn-git:hover {
-  background: lightgray;
+  border: 2px solid rgb(206, 120, 77);
+  color: rgb(206, 120, 77);
 }
 
 /* ###################################### CONTACT ME STYLING

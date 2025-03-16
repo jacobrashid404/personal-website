@@ -425,16 +425,18 @@ ABOUT STYLING ***********************************************************
 }
 
 .timeline-item {
+  filter: grayscale(100%);
   display: flex;
   align-items: center;
   width: 100%;
   position: relative;
   padding-left: 40px;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .timeline-item:hover {
-  filter: invert(100%);
+  filter: grayscale(0%);
   transform: translateX(10px);
 }
 
@@ -464,6 +466,27 @@ ABOUT STYLING ***********************************************************
   font-size: 1rem;
   color: #ccc;
   margin: 5px 0;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: black;
+  border: 1px solid gold;
+  color: gold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.tag:hover {
+  filter: grayscale(100%);
 }
 
 

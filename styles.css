@@ -407,7 +407,9 @@ ABOUT STYLING ***********************************************************
 
 #experience h2 {
   font-size: 2.8rem;
-  color: #fff;
+  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
 }
 
@@ -446,7 +448,6 @@ ABOUT STYLING ***********************************************************
 
 .timeline-content {
   background: black;
-  border-radius: 8px;
   padding: 15px;
   text-align: left;
   width: 100%;

@@ -449,9 +449,13 @@ ABOUT STYLING ***********************************************************
   margin-bottom: 15px;
 }
 
-.project b {
-  transition: all 0.3s ease-in-out;
+.project a {
+  transition: all 0.5s ease-in-out;
   color: rgb(206, 120, 77);
+}
+
+.project a:hover {
+  border-radius: 10px;
 }
 
 .project .btn-demo {
@@ -459,9 +463,9 @@ ABOUT STYLING ***********************************************************
   padding: 10px 20px;
   color: #fff;
   background: rgb(206, 120, 77);
+  border: 2px solid white;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.3s ease;
 }
 
 .project .btn-git {
@@ -471,7 +475,7 @@ ABOUT STYLING ***********************************************************
   background: white;
   text-decoration: none;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  border: 2px solid rgb(206, 120, 77);
 }
 
 .project .btn-demo:hover {

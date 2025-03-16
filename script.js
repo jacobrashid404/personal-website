@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-
   // invert gradient when hovering over the resume link
   const resumeLink = document.querySelector('.resume-link');
   invertGradient(resumeLink);
@@ -316,3 +314,13 @@ document.addEventListener("DOMContentLoaded", () => {
   contactButton.addEventListener("mouseenter", () => contactButton.style.background = "");
 
 });
+
+
+// copy email to user clipboard when they click on email icon
+function copyEmailToClipboard(event) {
+  event.preventDefault();
+
+  const linkPreview = document.querySelector(".link-preview");
+  navigator.clipboard.writeText("jacobrashid404@gmail.com");
+  linkPreview.innerHTML = "Copied!"
+}

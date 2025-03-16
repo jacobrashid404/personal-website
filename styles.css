@@ -576,6 +576,10 @@ ABOUT STYLING ***********************************************************
   flex-direction: column;
 }
 
+.contact-form p{
+  color: #333;
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;

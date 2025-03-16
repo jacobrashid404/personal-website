@@ -230,6 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillDisplay = document.querySelectorAll('.skill-display');
   skillDisplay.forEach((element) => observerDelayTwoRight.observe(element));
 
+  // experience section
+  const experienceRowOne = document.querySelectorAll('.experience-row-one');
+  experienceRowOne.forEach((element) => observerNormalLeft.observe(element));
+
+  const experienceRowTwo = document.querySelectorAll('.experience-row-two');
+  experienceRowTwo.forEach((element) => observerDelayOneRight.observe(element));
+
+  const experienceRowThree = document.querySelectorAll('.experience-row-three');
+  experienceRowThree.forEach((element) => observerDelayTwoLeft.observe(element));
+
 
   // project section
   const projectRowZero = document.querySelectorAll('.project-row-0');

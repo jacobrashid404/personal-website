@@ -432,7 +432,7 @@ ABOUT STYLING ***********************************************************
 }
 
 .project:hover {
-  border-radius: 25px;
+  /* border-radius: 25px; */
   background-color: rgb(19, 19, 19);
   /* border: 2px solid rgb(206, 120, 77); */
 }
@@ -441,6 +441,10 @@ ABOUT STYLING ***********************************************************
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 15px;
+}
+
+.project b {
+  color: rgb(206, 120, 77);
 }
 
 .project p {

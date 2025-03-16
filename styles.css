@@ -435,6 +435,7 @@ ABOUT STYLING ***********************************************************
 
 .timeline-item:hover {
   filter: invert(100%);
+  transform: translateX(10px);
 }
 
 .timeline-dot {

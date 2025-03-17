@@ -34,37 +34,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // invert gradient when hovering over the resume link
   const resumeLink = document.querySelector('.resume-link');
-  invertGradient(resumeLink);
+  addInvertColorTrigger(resumeLink);
 
-  function invertGradient(triggerElement) {
+
+
+  function addInvertColorTrigger(triggerElement) {
     const gradientElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');
 
-    function invertBorder() {
+    function changeSiteBorder() {
       bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
       bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
       bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
     }
-    function restoreBorder() {
+    function restoreSiteBorder() {
       bodyElement.style.borderLeft = '';
       bodyElement.style.borderBottom = '';
       bodyElement.style.borderRight = '';
     }
 
     triggerElement.addEventListener("mouseenter", () => {
-      invertBorder();
+      changeSiteBorder();
       gradientElements.forEach(entry => {
         entry.style.filter = 'invert(100%)';
       });
     });
 
     triggerElement.addEventListener("mouseleave", () => {
-      restoreBorder();
+      restoreSiteBorder();
       gradientElements.forEach(entry => {
         entry.style.filter = 'invert(0%)';
       });
     });
   }
+
+
+  function addGrayscaleColorTrigger(triggerElement) {
+    const grayscaleElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
+    const bodyElement = document.querySelector('body');
+
+    function changeSiteBorder() {
+      bodyElement.style.borderLeft = '2px solid grey';
+      bodyElement.style.borderBottom = '2px solid grey';
+      bodyElement.style.borderRight = '2px solid #333';
+    }
+
+    function restoreSiteBorder () {
+      bodyElement.style.border = '';
+    }
+
+    triggerElement.addEventListener("mouseenter", () => {
+      changeSiteBorder();
+      grayscaleElements.forEach(entry => {
+        entry.style.filter = 'grayscale(100%)';
+      });
+    });
+
+    triggerElement.addEventListener("mouseleave", () => {
+      restoreSiteBorder();
+      grayscaleElements.forEach(entry => {
+        entry.style.filter = 'grayscale(0%)';
+      });
+    });
+  }
+
 
 
   // display preview when hovering a social link
@@ -85,10 +118,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  // invert gradient when hovering over skills grid
+  // invert typewriter text gradient when hovering over skills grid
   const typingText = document.querySelector('.typing-text');
   const skillsGrid = document.querySelector('.skills-grid');
-  invertGradient(skillsGrid);
+  addInvertColorTrigger(skillsGrid);
 
   skillsGrid.addEventListener("mouseenter", () => {
     typingText.style.filter = 'invert(100%)';
@@ -100,9 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  let isFlashing = false;
-
   // highlights a list of words with a slight delay between each element
+  let isFlashing = false
+
   function flashWords(parentElement) {
     if (isFlashing) return;
 
@@ -111,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectWords.forEach((word, index) => {
       setTimeout(() => {
-        word.style.color = "gold"; // color of highlighted skills
+        word.style.color = "white"; // color of highlighted skills
       }, index * 500);
     });
 
@@ -126,22 +159,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let flashInterval = null;
 
-  // highlight key skills when hovering over a project
-  document.addEventListener("mouseout", (event) => {
-    if (event.target.classList.contains("project")) {
-      clearInterval(flashInterval);
-      flashInterval = null;
-    }
-  });
 
-  document.addEventListener("mousemove", (event) => {
-    if (event.target.classList.contains("project")) {
-      if (!flashInterval) {
-        flashInterval = setInterval(() => {
-          flashWords(event.target);
-        }, 500);
-      }
-    }
+  // highlight key skills and add grayscale effect to website when hovering over a project
+  const projectElements = document.querySelectorAll(".project");
+
+  projectElements.forEach((element) => {
+    addGrayscaleColorTrigger(element);
+    // element.addEventListener("mouseenter", (event) => {
+    //   if (!flashInterval) {
+    //     flashInterval = setInterval(() => {
+    //       flashWords(event.target);
+    //     }, 500);
+    //   }
+    // });
+
+    // element.addEventListener("mouseleave", () => {
+    //   clearInterval(flashInterval);
+    //   flashInterval = null;
+    // });
   });
 
 

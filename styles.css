@@ -515,7 +515,8 @@ ABOUT STYLING ***********************************************************
 
 #projects h2 {
   font-size: 2.8rem;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: linear-gradient(45deg, crimson, black);
+  filter: brightness(150%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
@@ -531,18 +532,24 @@ ABOUT STYLING ***********************************************************
 
 .project {
   background-color: black;
-  border-radius: 15px;
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   transition: all 0.5s ease-in-out;
-  /* border: 2px solid transparent; */
-  border: 2px solid rgb(206, 120, 77);
+  border-left: 2px solid crimson;
 }
 
 .project:hover {
-  /* border-radius: 25px; */
-  /* background-color: rgb(19, 19, 19); */
-  /* border: 2px solid rgb(206, 120, 77); */
+  transform: translateX(10px);
+  border-left: 2px solid grey;
+}
+
+.project:hover a{
+  border-bottom: 2px solid grey;
+  color: grey;
+}
+
+.project:hover b {
+  color: teal;
 }
 
 .project h3 {
@@ -552,7 +559,7 @@ ABOUT STYLING ***********************************************************
 }
 
 .project b {
-  color: rgb(206, 120, 77);
+  color: crimson;
   transition: all 0.5s ease-in-out;
 }
 
@@ -564,17 +571,17 @@ ABOUT STYLING ***********************************************************
 
 .project a {
   transition: all 0.5s ease-in-out;
-  color: rgb(206, 120, 77);
+  color: crimson;
   display: inline-block;
   padding: 10px 20px;
   background: black;
   text-decoration: none;
-  border: 2px solid rgb(206, 120, 77);
-  border-radius: 6px;
+  border-bottom: 2px solid crimson;
 }
 
 .project a:hover {
-  border-radius: 12px;
+  background: grey;
+  color: black;
 }
 
 /* ###################################### CONTACT ME STYLING

@@ -690,10 +690,9 @@ textarea:focus {
 
 button {
   width: 100px;
-  background: rgba(158, 28, 152, 0.25);
+  background: black;
   color: white;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid rgba(158, 28, 152, 0.25);
   font-size: 1rem;
   padding: 10px;
   margin-top: 15px;

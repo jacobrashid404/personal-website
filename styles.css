@@ -443,7 +443,6 @@ ABOUT STYLING ***********************************************************
 }
 
 .timeline-item {
-  filter: grayscale(50%);
   display: flex;
   align-items: center;
   width: 100%;
@@ -455,7 +454,7 @@ ABOUT STYLING ***********************************************************
 
 .timeline-item:hover {
   filter: grayscale(0%);
-  transform: translateX(10px);
+  transform: translateX(10px) translateY(-10px);
 }
 
 .timeline-dot {

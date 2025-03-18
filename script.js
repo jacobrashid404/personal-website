@@ -17,9 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.3 });
   sections.forEach((section) => sectionObserver.observe(section));
 
-  // grayscale other like-elements when hovering
+
+  // grayscale other experience elements when hovering over a particular element
   const expereinces = document.querySelectorAll(".timeline-item");
   expereinces.forEach((experience) => {
+    addGrayscaleColorTrigger(experience);
+
     experience.addEventListener("mouseenter", (event) => {
       expereinces.forEach((experience) => {
         if (experience != event.target) {
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    experience.addEventListener("mouseleave", (event) => {
+    experience.addEventListener("mouseleave", () => {
       expereinces.forEach((experience) => {
         experience.style.filter = 'grayscale(0%)';
       });
@@ -365,15 +368,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   eclipse.addEventListener("mouseout", () => {
-    navBar.style.filter = 'brightness(1)';
-    body.style.borderLeftColor = 'gold';
-    body.style.borderBottomColor = 'rgb(206, 120, 77)';
-    body.style.borderRightColor = 'rgb(158, 28, 152)';
-    contactText.style.textShadow = 'none';
-    nameInput.style.borderColor = 'rgba(255, 217, 0, 0.25)';
-    emailInput.style.borderColor = 'rgba(206, 120, 77, 0.25)';
-    messageInput.style.borderColor = 'rgba(158, 28, 152, 0.25)';
-    contactButton.style.background = 'rgba(158, 28, 152, 0.25)';
+    navBar.style.filter = '';
+    body.style.borderLeftColor = '';
+    body.style.borderBottomColor = '';
+    body.style.borderRightColor = '';
+    contactText.style.textShadow = '';
+    nameInput.style.borderColor = '';
+    emailInput.style.borderColor = '';
+    messageInput.style.borderColor = '';
+    contactButton.style.background = '';
   });
 
 

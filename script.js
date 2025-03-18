@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // grayscale other experience elements when hovering over a particular element
   const expereinces = document.querySelectorAll(".timeline-item");
+
   expereinces.forEach((experience) => {
     addGrayscaleColorTrigger(experience);
 
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
 
   // handle form submission, transition to thank you message
   document.getElementById("contact-form").addEventListener("submit", async function (event) {

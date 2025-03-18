@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.3 });
   sections.forEach((section) => sectionObserver.observe(section));
 
+  // grayscale other like-elements when hovering
+  const expereinces = document.querySelectorAll(".timeline-item");
+  expereinces.forEach((experience) => {
+    experience.addEventListener("mouseenter", (event) => {
+      expereinces.forEach((experience) => {
+        if (experience != event.target) {
+          experience.style.filter = 'grayscale(100%)';
+        }
+      });
+    });
+
+    experience.addEventListener("mouseleave", (event) => {
+      expereinces.forEach((experience) => {
+        experience.style.filter = 'grayscale(0%)';
+      });
+    });
+  });
 
   // handle form submission, transition to thank you message
   document.getElementById("contact-form").addEventListener("submit", async function (event) {

@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // handle active navbar tab behavior
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const sectionId = entry.target.id;
+      console.log("sectionId", sectionId);
+      const currLink = document.querySelector(`nav ul li a[name="${sectionId}"]`);
+
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        currLink.classList.add("active");
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach((section) => sectionObserver.observe(section));
+
+
   // handle form submission, transition to thank you message
   document.getElementById("contact-form").addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -134,30 +153,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // highlights a list of words with a slight delay between each element
-  let isFlashing = false
+  // let isFlashing = false
 
-  function flashWords(parentElement) {
-    if (isFlashing) return;
+  // function flashWords(parentElement) {
+  //   if (isFlashing) return;
 
-    isFlashing = true;
-    const projectWords = parentElement.querySelectorAll("b");
+  //   isFlashing = true;
+  //   const projectWords = parentElement.querySelectorAll("b");
 
-    projectWords.forEach((word, index) => {
-      setTimeout(() => {
-        word.style.color = "white"; // color of highlighted skills
-      }, index * 500);
-    });
+  //   projectWords.forEach((word, index) => {
+  //     setTimeout(() => {
+  //       word.style.color = "white"; // color of highlighted skills
+  //     }, index * 500);
+  //   });
 
-    setTimeout(() => {
-      projectWords.forEach((word) => {
-        word.style.color = "";
-      });
-      isFlashing = false;
-    }, projectWords.length * 500);
-  }
+  //   setTimeout(() => {
+  //     projectWords.forEach((word) => {
+  //       word.style.color = "";
+  //     });
+  //     isFlashing = false;
+  //   }, projectWords.length * 500);
+  // }
 
 
-  let flashInterval = null;
+  // let flashInterval = null;
 
 
   // highlight key skills and add grayscale effect to website when hovering over a project

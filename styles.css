@@ -92,6 +92,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: white;
+  transform: translateX(2px);
 }
 
 nav ul li a.active {

@@ -541,7 +541,7 @@ ABOUT STYLING ***********************************************************
 }
 
 .project:hover {
-  transform: translateX(10px);
+  transform: translateX(10px) translateY(-10px);
   border-left: 2px solid grey;
 }
 

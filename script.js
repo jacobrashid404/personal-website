@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currLink.classList.add("active");
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
   sections.forEach((section) => sectionObserver.observe(section));
 
 

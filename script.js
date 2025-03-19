@@ -90,9 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
     }
     function restoreSiteBorder() {
-      bodyElement.style.borderLeft = '';
-      bodyElement.style.borderBottom = '';
-      bodyElement.style.borderRight = '';
+      bodyElement.style.border= '';
     }
 
     triggerElement.addEventListener("mouseenter", () => {

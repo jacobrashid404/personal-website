@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     experience.addEventListener("mouseenter", (event) => {
       expereinces.forEach((experience) => {
         if (experience != event.target) {
-          experience.style.filter = 'grayscale(100%)';
+          experience.style.filter = 'grayscale(100%) blur(2px)';
         }
       });
     });
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     experience.addEventListener("mouseleave", () => {
       expereinces.forEach((experience) => {
         experience.style.filter = 'grayscale(0%)';
+        experience.style.blur = '';
       });
     });
   });
@@ -173,51 +174,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-
-  // highlights a list of words with a slight delay between each element
-  // let isFlashing = false
-
-  // function flashWords(parentElement) {
-  //   if (isFlashing) return;
-
-  //   isFlashing = true;
-  //   const projectWords = parentElement.querySelectorAll("b");
-
-  //   projectWords.forEach((word, index) => {
-  //     setTimeout(() => {
-  //       word.style.color = "white"; // color of highlighted skills
-  //     }, index * 500);
-  //   });
-
-  //   setTimeout(() => {
-  //     projectWords.forEach((word) => {
-  //       word.style.color = "";
-  //     });
-  //     isFlashing = false;
-  //   }, projectWords.length * 500);
-  // }
-
-
-  // let flashInterval = null;
-
-
-  // highlight key skills and add grayscale effect to website when hovering over a project
+  // add grayscale trigger for project elements
   const projectElements = document.querySelectorAll(".project");
 
   projectElements.forEach((element) => {
     addGrayscaleColorTrigger(element);
-    // element.addEventListener("mouseenter", (event) => {
-    //   if (!flashInterval) {
-    //     flashInterval = setInterval(() => {
-    //       flashWords(event.target);
-    //     }, 500);
-    //   }
-    // });
 
-    // element.addEventListener("mouseleave", () => {
-    //   clearInterval(flashInterval);
-    //   flashInterval = null;
-    // });
+    element.addEventListener("mouseenter", (event) => {
+      projectElements.forEach((project) => {
+        if (project != event.target) {
+          project.style.filter = 'blur(2px)';
+        }
+      });
+    });
+
+    element.addEventListener("mouseleave", () => {
+      projectElements.forEach((project) => {
+        project.style.filter = '';
+      });
+    });
   });
 
 

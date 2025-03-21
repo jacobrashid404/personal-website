@@ -79,7 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
   addInvertColorTrigger(resumeLink);
 
 
-
+  /** Adds a trigger to the given element which applies a grayscale effect over the primary website componenets
+   *  Input: HTML Element
+   *  Output: None
+   *  Result: HTML Element now has the grayscale trigger on hover
+  */
   function addInvertColorTrigger(triggerElement) {
     const gradientElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');
@@ -172,9 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // add grayscale trigger for project elements
+  // project section
   const projectElements = document.querySelectorAll(".project");
 
+  // add grayscale trigger for project elements
   projectElements.forEach((element) => {
     addGrayscaleColorTrigger(element);
 
@@ -192,6 +197,23 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+
+  /** Appends an external link symbol to the end of all external Github and
+   *  demo links within the projects section using 'Font Awesome'
+   *
+   *  Input: none (links automatically selected)
+   *  Output: none
+   *  Result: all external links in the project section have an external link symbol
+   */
+  function addExternalLinkSymbols() {
+    const externalProjLinks = document.querySelectorAll('.project a');
+
+    externalProjLinks.forEach(link => {
+      link.innerHTML += ' <i class="fa-solid fa-square-arrow-up-right">';
+    });
+  }
+  addExternalLinkSymbols();
 
 
 

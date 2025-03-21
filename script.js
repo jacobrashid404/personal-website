@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
   projectRowTwo.forEach((element) => observerDelayOneLeft.observe(element));
 
   const projectRowThree = document.querySelectorAll('.project-row-3');
-  projectRowThree.forEach((element) => observerDelayTwoRight.observe(element));
+  projectRowThree.forEach((element) => observerNormalRight.observe(element));
 
 
   // contact section

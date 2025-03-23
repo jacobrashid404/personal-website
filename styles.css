@@ -108,6 +108,10 @@ nav ul li a.active {
   padding: 15px 15px;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 /*
 ANIMATIONS ***********************************************************
 */
@@ -233,32 +237,18 @@ HOME STYLING ***********************************************************
 }
 
 #home p, #home h1, #home a {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 3s ease-out forwards;
   margin-bottom: 30px;
 }
 
-#home h1:nth-of-type(1) { animation-delay: 0.4s; }
+/* #home h1:nth-of-type(1) { animation-delay: 0.4s; }
 #home p:nth-of-type(2) { animation-delay: 0.6s; }
 #home h1:nth-of-type(2) { animation-delay: 0.8s; }
 #home p:nth-of-type(3) { animation-delay: 1s; }
-#home p:nth-of-type(4) {animation-delay: 1.8s}
+#home p:nth-of-type(4) {animation-delay: 1.8s }
 #home a:nth-of-type(1) { animation-delay: 1.2s; }
 #home a:nth-of-type(2) { animation-delay: 1.4s; }
 #home a:nth-of-type(3) { animation-delay: 1.6s; }
-#home a:nth-of-type(4) { animation-delay: 1.8s;}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+#home a:nth-of-type(4) { animation-delay: 1.8s; } */
 
 .social-links {
   display: flex;
@@ -278,6 +268,7 @@ HOME STYLING ***********************************************************
   background: white;
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
 .social-links .resume-link {
   display: flex;
   align-items: center;
@@ -599,12 +590,6 @@ ABOUT STYLING ***********************************************************
 
 .contact-form p{
   color: #333;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease;
 }
 
 #contact-text {

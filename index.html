@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -29,18 +29,18 @@
   </nav>
 
   <section id="home">
-    <p class="intro-text">Hi, my name is</p>
-    <h1 class="my-name">Jacob</h1>
-    <p class="intro-text">and I'm a</p>
-    <h1 class="title">Software Engineer</h1>
-    <p class="intro-text">specializing in <b>JavaScript</b>, <b>React</b>, and <b>Express</b></p>
-    <p class="intro-text">based in <b class="city">Portland, OR <i class="fa-solid fa-location-dot"></i></b> </p>
+    <p class="intro-text hidden">Hi, my name is</p>
+    <h1 class="my-name hidden">Jacob</h1>
+    <p class="intro-text hidden">and I'm a</p>
+    <h1 class="title hidden">Software Engineer</h1>
+    <p class="intro-text hidden">specializing in <b>JavaScript</b>, <b>React</b>, and <b>Express</b></p>
+    <p class="intro-text hidden">based in <b class="city">Portland, OR <i class="fa-solid fa-location-dot"></i></b> </p>
     <!-- <a href="https://www.linkedin.com/in/jacob-rashid-dev/" target="_blank" class="linkedin-button">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
         class="linkedin-logo">
       Connect with me
     </a> -->
-    <div class="social-links">
+    <div class="social-links hidden">
       <a href="https://www.linkedin.com/in/jacob-rashid-dev/" target="_blank" class="link linkedin-link"
         title="LinkedIn" name="LinkedIn">
         <img src="icons/linkedin.svg" alt="LinkedIn">
@@ -258,7 +258,7 @@
       </form>
       <p class="direct-email contact-row-3">If you prefer to email me directly, please find my email in the social links on the homepage</p>
     </div>
-    <div class="eclipse hidden">
+    <div class="eclipse">
     </div>
   </section>
 

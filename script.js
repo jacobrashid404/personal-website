@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
 
   // handle active navbar tab behavior
   const sections = document.querySelectorAll('section');
@@ -225,31 +225,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // TODO: refactor homepage animation code to align with overall application conventions
 
   const observerRefactor =  new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.remove('hidden');
-
-        if (index % 2 === 0) {
-          entry.target.classList.add('animate-left-delay-2');
-        }
-        else {
-          entry.target.classList.add('animate-right-delay-2');
-        }
+        entry.target.classList.add('animate-refac-test');
       }
-
       else {
-        entry.target.classList.add('hidden');
-        entry.target.classList.remove('animate-left-delay-2');
-        entry.target.classList.remove('animate-right-delay-2');
+        entry.target.classList.remove('animate-refac-test');
       }
     })
   });
 
-  const homeSection = document.getElementById("home");
-  const homeElements = homeSection.children;
-  for (const element of homeElements) {
-    observerRefactor.observe(element);
-  }
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((element) => observerRefactor.observe(element));
 
 
   // adds animate-left class to a list of elements
@@ -441,8 +428,6 @@ document.addEventListener("DOMContentLoaded", () => {
   emailInput.addEventListener("focus", () => emailInput.style.borderColor = "");
   messageInput.addEventListener("focus", () => messageInput.style.borderColor = "");
   contactButton.addEventListener("mouseenter", () => contactButton.style.background = "");
-
-});
 
 
 // copy email to user clipboard when they click on email icon

@@ -115,7 +115,7 @@ ANIMATIONS ***********************************************************
 @keyframes slide-left{
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(50px);
     filter: blur(10px);
   }
 
@@ -148,7 +148,7 @@ ANIMATIONS ***********************************************************
 @keyframes slide-right {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-50px);
     filter: blur(10px);
   }
 

@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addExternalLinkSymbols();
 
 
-
+  //TODO: refactor this code into one function that alternates between the two animation class types (left and right)
   // adds animate-left class to a list of elements
   const observerNormalLeft = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -230,6 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.remove('hidden');
         entry.target.classList.add('animate-left');
         return;
+      }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-left');
       }
     });
   });
@@ -242,6 +246,10 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add('animate-left-delay-1');
         return;
       }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-left-delay-1');
+      }
     });
   });
 
@@ -253,9 +261,12 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add('animate-left-delay-2');
         return;
       }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-left-delay-2');
+      }
     });
   });
-
 
   // adds animate-right class to a list of elements
   const observerNormalRight = new IntersectionObserver(entries => {
@@ -264,6 +275,10 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.remove('hidden');
         entry.target.classList.add('animate-right');
         return;
+      }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-right');
       }
     });
   });
@@ -276,6 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add('animate-right-delay-1');
         return;
       }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-right-delay-1');
+      }
     });
   });
 
@@ -286,6 +305,10 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.remove('hidden');
         entry.target.classList.add('animate-right-delay-2');
         return;
+      }
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-right-delay-2');
       }
     });
   });

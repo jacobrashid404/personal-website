@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   // handle active navbar tab behavior
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav ul li a');
@@ -79,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
   addInvertColorTrigger(resumeLink);
 
 
-  /** Adds a trigger to the given element which applies a grayscale effect over the primary website componenets
+  /** Adds a trigger to the given element which applies an invert color effect over the primary website componenets
    *  Input: HTML Element
    *  Output: None
-   *  Result: HTML Element now has the grayscale trigger on hover
+   *  Result: HTML Element now has the invert trigger on hover
   */
   function addInvertColorTrigger(triggerElement) {
     const gradientElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
@@ -113,6 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  /** Adds a trigger to the given element which applies a grayscale effect over the primary website componenets
+   *  Input: HTML Element
+   *  Output: None
+   *  Result: HTML Element now has the grayscale trigger on hover
+  */
   function addGrayscaleColorTrigger(triggerElement) {
     const grayscaleElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const sectionId = entry.target.id;
-      console.log("sectionId", sectionId);
       const currLink = document.querySelector(`nav ul li a[name="${sectionId}"]`);
 
       if (entry.isIntersecting) {
@@ -224,6 +223,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //TODO: refactor this code into one function that alternates between the two animation class types (left and right)
   // TODO: refactor homepage animation code to align with overall application conventions
+
+  const observerRefactor =  new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+
+        if (index % 2 === 0) {
+          entry.target.classList.add('animate-left-delay-2');
+        }
+        else {
+          entry.target.classList.add('animate-right-delay-2');
+        }
+      }
+
+      else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('animate-left-delay-2');
+        entry.target.classList.remove('animate-right-delay-2');
+      }
+    })
+  });
+
+  const homeSection = document.getElementById("home");
+  const homeElements = homeSection.children;
+  for (const element of homeElements) {
+    observerRefactor.observe(element);
+  }
+
 
   // adds animate-left class to a list of elements
   const observerNormalLeft = new IntersectionObserver(entries => {

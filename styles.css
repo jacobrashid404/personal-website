@@ -18,6 +18,8 @@ GENERAL STYLING ***********************************************************
 
   .mobile-message {
     display: block;
+    color: white;
+    margin: auto;
   }
 }
 
@@ -32,7 +34,6 @@ GENERAL STYLING ***********************************************************
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Share Tech Mono', monospace;
 }
 
@@ -44,7 +45,6 @@ body {
   z-index: 1000000;
   margin-bottom: 3px;
   font-family: "Pacifico", sans-serif;
-  /* background: #121212; */
   background: radial-gradient(circle, rgba(0,0,0,0.93), rgba(0, 0, 0, 1) 90%);
   border-left: 2px solid gold;
   border-right: 2px solid rgb(156, 24, 156);

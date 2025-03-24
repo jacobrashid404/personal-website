@@ -634,7 +634,7 @@ ANIMATIONS ***********************************************************
 
 .hidden {
   opacity: 0;
-  filter: blur(20px);
+  filter: blur(30px);
   transform: translateX(-100px);
   transition: all 1.5s;
 }

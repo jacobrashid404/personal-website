@@ -116,7 +116,7 @@ ANIMATIONS ***********************************************************
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-50px);
-  transition: all 1s;
+  transition: all 2s;
 }
 
 .animate-refac-test {
@@ -275,7 +275,7 @@ HOME STYLING ***********************************************************
   height: auto;
   border-radius: 50%;
   background: white;
-  transition: background 0.5s ease, transform 0.5s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .social-links .resume-link {
@@ -286,7 +286,7 @@ HOME STYLING ***********************************************************
   height: 52px;
   border-radius: 50%;
   background: linear-gradient(45deg, gold, rgb(156, 24, 156));
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .social-links a {

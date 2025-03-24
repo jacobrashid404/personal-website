@@ -242,7 +242,7 @@ HOME STYLING ***********************************************************
 
 .link-preview {
   height: 3%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #home p, #home h1, #home a {
@@ -275,7 +275,7 @@ HOME STYLING ***********************************************************
   height: auto;
   border-radius: 50%;
   background: white;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.5s ease, transform 0.5s ease;
 }
 
 .social-links .resume-link {

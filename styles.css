@@ -659,6 +659,7 @@ ANIMATIONS ***********************************************************
   transition-delay: 500ms;
 }
 
+
 .link:nth-child(2){
   transition-delay: 100ms;
 }

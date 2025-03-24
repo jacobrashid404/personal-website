@@ -221,9 +221,9 @@
   addExternalLinkSymbols();
 
 
-  //TODO: refactor this code into one function that alternates between the two animation class types (left and right)
-  // TODO: refactor homepage animation code to align with overall application conventions
 
+  // animate home elements
+  //TODO: test on rest of animations
   const observerRefactor =  new IntersectionObserver(entries => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -234,9 +234,9 @@
       }
     })
   });
-
   const hiddenElements = document.querySelectorAll('.hidden');
   hiddenElements.forEach((element) => observerRefactor.observe(element));
+
 
 
   // adds animate-left class to a list of elements

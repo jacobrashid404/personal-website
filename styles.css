@@ -636,7 +636,7 @@ ANIMATIONS ***********************************************************
   opacity: 0;
   filter: blur(30px);
   transform: translateX(-100px);
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .hidden:nth-child(2) {

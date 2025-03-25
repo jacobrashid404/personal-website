@@ -659,17 +659,16 @@ ANIMATIONS ***********************************************************
   transition-delay: 500ms;
 }
 
-
 .link:nth-child(2){
-  transition-delay: 100ms;
-}
-
-.link:nth-child(3){
   transition-delay: 200ms;
 }
 
+.link:nth-child(3){
+  transition-delay: 400ms;
+}
+
 .link:nth-child(4){
-  transition-delay: 300ms;
+  transition-delay: 600ms;
 }
 
 .animate-refac-test {

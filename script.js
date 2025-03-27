@@ -88,24 +88,13 @@
     const gradientElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');
 
-    function changeSiteBorder() {
-      bodyElement.style.borderLeft = '2px solid rgb(0, 40, 255)';
-      bodyElement.style.borderBottom = '2px solid rgb(49, 135, 178)';
-      bodyElement.style.borderRight = '2px solid rgb(97, 227, 103)';
-    }
-    function restoreSiteBorder() {
-      bodyElement.style.border= '';
-    }
-
     triggerElement.addEventListener("mouseenter", () => {
-      changeSiteBorder();
       gradientElements.forEach(entry => {
         entry.style.filter = 'invert(100%)';
       });
     });
 
     triggerElement.addEventListener("mouseleave", () => {
-      restoreSiteBorder();
       gradientElements.forEach(entry => {
         entry.style.filter = 'invert(0%)';
       });
@@ -122,25 +111,13 @@
     const grayscaleElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
     const bodyElement = document.querySelector('body');
 
-    function changeSiteBorder() {
-      bodyElement.style.borderLeft = '2px solid grey';
-      bodyElement.style.borderBottom = '2px solid grey';
-      bodyElement.style.borderRight = '2px solid #333';
-    }
-
-    function restoreSiteBorder () {
-      bodyElement.style.border = '';
-    }
-
     triggerElement.addEventListener("mouseenter", () => {
-      changeSiteBorder();
       grayscaleElements.forEach(entry => {
         entry.style.filter = 'grayscale(100%)';
       });
     });
 
     triggerElement.addEventListener("mouseleave", () => {
-      restoreSiteBorder();
       grayscaleElements.forEach(entry => {
         entry.style.filter = 'grayscale(0%)';
       });
@@ -385,7 +362,6 @@
 
 
   // handle brightness change when hovering over eclipse
-  const body = document.querySelector('body');
   const eclipse = document.querySelector('.eclipse');
   const contactSection = document.getElementById('contact');
   const nameInput = contactSection.querySelector('input[name="name"]');
@@ -399,9 +375,6 @@
   // and reset when not hovering
   eclipse.addEventListener("mouseover", () => {
     navBar.style.filter = 'brightness(0.5)';
-    body.style.borderLeftColor = 'rgba(255, 217, 0, 0.25)';
-    body.style.borderBottomColor = 'rgba(206, 120, 77, 0.25)';
-    body.style.borderRightColor = 'rgba(158, 28, 152, 0.25)';
     contactText.style.textShadow = '0 0 30px white';
     nameInput.style.borderColor = 'gold';
     emailInput.style.borderColor = 'rgb(206, 120, 77)';
@@ -411,9 +384,6 @@
 
   eclipse.addEventListener("mouseout", () => {
     navBar.style.filter = '';
-    body.style.borderLeftColor = '';
-    body.style.borderBottomColor = '';
-    body.style.borderRightColor = '';
     contactText.style.textShadow = '';
     nameInput.style.borderColor = '';
     emailInput.style.borderColor = '';

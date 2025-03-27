@@ -446,6 +446,7 @@ ABOUT STYLING ***********************************************************
 .project {
   background-color: black;
   padding: 15px;
+  padding-bottom: 8px;
   text-align: left;
   transition: all 0.5s ease-in-out;
   border-left: 2px solid crimson;
@@ -458,12 +459,12 @@ ABOUT STYLING ***********************************************************
 
 .project:hover a{
   border-bottom: 2px solid grey;
-  color: grey;
+  color: crimson;
 }
 
-.project:hover b {
+/* .project:hover b {
   color: teal;
-}
+} */
 
 .project h3 {
   font-size: 1.5rem;
@@ -495,6 +496,19 @@ ABOUT STYLING ***********************************************************
 .project a:hover {
   background: grey;
   color: black;
+}
+
+.tags {
+  margin-top: 15px;
+}
+
+.tag {
+  border: 1px solid crimson;
+  color: crimson;
+}
+
+.tag:hover {
+  filter: grayscale(100%);
 }
 
 /* ###################################### CONTACT ME STYLING

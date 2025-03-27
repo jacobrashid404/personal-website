@@ -109,7 +109,6 @@
   */
   function addGrayscaleColorTrigger(triggerElement) {
     const grayscaleElements = document.querySelectorAll('.title, .navbar, .my-name, .city');
-    const bodyElement = document.querySelector('body');
 
     triggerElement.addEventListener("mouseenter", () => {
       grayscaleElements.forEach(entry => {
@@ -168,7 +167,7 @@
     element.addEventListener("mouseenter", (event) => {
       projectElements.forEach((project) => {
         if (project != event.target) {
-          project.style.filter = 'blur(2px)';
+          project.style.filter = 'blur(2px) grayscale(80%)';
         }
       });
     });

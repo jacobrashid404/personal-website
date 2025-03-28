@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
 }
 
 section {
-  height: 100vh;
+  height: 105vh;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -498,16 +498,16 @@ ABOUT STYLING ***********************************************************
   color: black;
 }
 
-.tags {
+.project .tags {
   margin-top: 15px;
 }
 
-.tag {
+.project .tag {
   border: 1px solid crimson;
   color: crimson;
 }
 
-.tag:hover {
+.project .tag:hover {
   filter: grayscale(100%);
 }
 

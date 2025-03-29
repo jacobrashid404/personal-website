@@ -1,6 +1,6 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-
-  // handle active navbar tab behavior
+// handle active navbar tab behavior
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -407,3 +407,5 @@ function copyEmailToClipboard(event) {
   navigator.clipboard.writeText("jacobrashid404@gmail.com");
   linkPreview.innerHTML = "Copied!"
 }
+
+});

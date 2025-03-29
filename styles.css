@@ -200,7 +200,6 @@ HOME STYLING ***********************************************************
   height: 52px;
   border-radius: 50%;
   background: linear-gradient(45deg, gold, rgb(156, 24, 156));
-  /* transition: all 0.5s ease-in-out; */
 }
 
 .social-links a {
@@ -224,7 +223,7 @@ HOME STYLING ***********************************************************
 }
 
 .social-links .resume-link:hover img {
-  transform: scale(1.2);
+  transform: scale(80%);
 }
 
 .social-links .resume-link:hover {

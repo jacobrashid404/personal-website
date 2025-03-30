@@ -30,7 +30,7 @@ GENERAL STYLING ***********************************************************
 }
 
 :root {
-  --app-gradient: linear-gradient(45deg, rgba(255, 215, 0, 0.9), crimson, rgba(156, 24, 156, 1));
+  --app-gradient: linear-gradient(45deg, rgb(255, 215, 0), crimson, rgb(156, 24, 156));
 }
 
 * {

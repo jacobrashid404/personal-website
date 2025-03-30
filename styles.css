@@ -637,12 +637,12 @@ button:hover {
   width: 500px;
   height: 500px;
   border-radius: 100%;
-  box-shadow: gold 0px 0px 200px 0px;
+  box-shadow: rgb(158, 28, 152) 0px 0px 200px 0px;
 }
 
 .eclipse:hover {
-  border-color: black;
-  box-shadow: rgb(158, 28, 152) 0px 0px 400px 0px;
+  border-color: crimson;
+  box-shadow: crimson 0px 0px 400px 0px;
   background: white;
 }
 

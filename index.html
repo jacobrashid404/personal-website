@@ -68,34 +68,31 @@
     </div>
     <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
     <script>
-        let skills = ['JavaScript', 'TypeScript', 'React', 'Express', 'Node.js', 'Python', 'Django', 'Flask', 'PostgreSQL', 'HTML', 'CSS'];
+      let skills = ['JavaScript', 'TypeScript', 'React', 'Express', 'Node.js', 'Python', 'Django', 'Flask', 'PostgreSQL', 'HTML', 'CSS'];
+      let currentIndex = 0; // Keep track of current index
 
-        function typeSkills(index = 0) {
-          const typingElement = document.querySelector(".typing-text");
-          typingElement.innerHTML = ""; // Ensure text is empty between cycles
+      function typeSkills() {
+        const typingElement = document.querySelector(".typing-text");
 
+        new TypeIt(typingElement, {
+          deleteSpeed: 70,
+          lifeLike: true,
+          afterComplete: () => {
+            setTimeout(() => {
+              currentIndex = (currentIndex + 1) % skills.length; // Move to the next skill
+              typeSkills(); // Restart typing
+            }, 200); // Small delay before restarting
+          }
+        })
+        .type(skills[currentIndex])
+        .pause(500) // Pause after word is typed
+        .delete()
+        .go();
+      }
 
-          const typeItInstance = new TypeIt(typingElement, {
-            deleteSpeed: 70,
-            lifeLike: true,
-          });
-
-          // Type the current skill
-          typeItInstance.type(skills[index])
-            .pause(3000)
-            .delete()
-            .pause(500)
-            .go();
-
-          // Give each skill enough time to be typed before moving to the next
-          setTimeout(() => {
-            index = (index + 1) % skills.length;
-            typeSkills(index);
-          }, 6000);
-        }
-
-        typeSkills();
+      typeSkills();
     </script>
+
 
     <div class="skills-grid">
       <div class="skill skill-row-1"><img src="icons/javascript.svg" alt="JavaScript">

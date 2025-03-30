@@ -29,6 +29,10 @@ GENERAL STYLING ***********************************************************
   }
 }
 
+:root {
+  --app-gradient: linear-gradient(45deg, rgba(255, 215, 0, 0.9), crimson, rgba(156, 24, 156, 1));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +71,7 @@ nav {
   width: 100%;
   height: 50px;
   text-align: left;
-  background: linear-gradient(45deg, rgba(255, 215, 0, 0.9), rgba(156, 24, 156, 1));
+  background: var(--app-gradient);
   backdrop-filter: blur(5px) grayscale(1);
 }
 
@@ -149,7 +153,7 @@ HOME STYLING ***********************************************************
 .title {
   font-size: 8rem;
   font-weight: 800;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
@@ -199,7 +203,7 @@ HOME STYLING ***********************************************************
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
 }
 
 .social-links a {
@@ -257,7 +261,7 @@ ABOUT STYLING ***********************************************************
 }
 
 .typing-text {
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
@@ -337,7 +341,7 @@ ABOUT STYLING ***********************************************************
 
 #experience h2 {
   font-size: 2.8rem;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
@@ -380,7 +384,7 @@ ABOUT STYLING ***********************************************************
   left: 0;
   width: 15px;
   height: 15px;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
   border-radius: 50%;
 }
 
@@ -389,12 +393,12 @@ ABOUT STYLING ***********************************************************
   padding: 15px;
   text-align: left;
   width: 100%;
-  border-left: 3px solid gold;
+  border-left: 3px solid goldenrod;
 }
 
 .timeline-content h3 {
   font-size: 1.5rem;
-  color: gold;
+  color: goldenrod;
 }
 
 .timeline-content p {
@@ -545,7 +549,7 @@ ABOUT STYLING ***********************************************************
 #contact h2 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  background: linear-gradient(45deg, gold, rgb(156, 24, 156));
+  background: var(--app-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,6 +1,5 @@
 {
-  "dependencies":{
-    "typeit":"^8.8.7"
+  "dependencies": {
+    "typeit": "^8.8.7"
   }
 }
-
